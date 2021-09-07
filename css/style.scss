@@ -1,0 +1,265 @@
+*, html, body{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+    background-color: #e7e7f1;
+}
+
+.wrap-radio{
+    input{
+        display: none;
+    }
+margin: 10px;
+.btn{
+    display: block;
+    width:30px ;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: -2px -2px 6px white, 2px 2px 6px #bfbfc8;
+    }
+
+.btn::before{
+position: absolute;
+content: '';
+width: 15px;
+height: 15px;
+display: block;
+border-radius: 50%;
+border: 3px solid #71716e;
+}
+
+input[type=radio]:checked ~ .btn{
+box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+}
+input[type=radio]:checked ~ .btn::before{
+background: #71716e;
+}
+}
+.wrap-tb{
+margin: 10px;
+    input{
+        display: none;
+    }
+    .btn-tb{
+        display: block;
+        width:30px ;
+        height: 30px;
+        border-radius: 20%;
+        box-shadow: -2px -2px 6px white, 2px 2px 6px #bfbfc8;
+    }
+    .btn-tb::before{
+        position: absolute;
+        content: url('../img/icons8-bot.png');
+        margin-top: 4px;
+                }
+    .btn-tb-scale::before{
+        position: absolute;
+        content: url('../img/icons8-bot.png');
+        transform: rotate(180deg);
+        margin-top: 0;
+        margin-bottom: 4px;
+        
+                }
+    input:active ~ .btn-tb{
+        box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+        }
+}
+.wrap-lr{
+    margin: 10px;
+    input{
+        display: none;
+    }
+    .btn-lr{
+            display: block;
+            width:30px ;
+            height: 30px;
+            border-radius: 20%;
+            box-shadow: -2px -2px 6px white, 2px 2px 6px #bfbfc8;
+              }
+        .btn-lr::before{
+            position: absolute;
+            content: url('../img/icons8-left.png');
+            margin-top: 5px;
+                    }
+        .btn-lr-scale::before{
+            position: absolute;
+            content: url('../img/icons8-left.png');
+            transform: rotate(180deg);
+            margin-top: 0;
+            margin-bottom: 6px;
+            
+                    }
+        input:active ~ .btn-lr{
+            box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+            }
+    }
+.wrap-check{
+    margin: 10px;
+    input{
+        display: none;
+    }
+        .btn-ch{
+            height: 26px;
+            width: 48px;
+            padding: 3px;
+            border-radius: 20px;
+            box-shadow: -2px -2px 6px #fff, 2px 2px 6px #bfbfc8;
+            
+              }
+              .btn-ch::before{
+                content: '';
+                display: block;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: -1px -1px 3px #fff, 1px 1px 3px #bfbfc8;
+                
+                
+            }
+    input[type=checkbox]:checked ~ .btn-ch{
+        background-color: #4d45c4;
+        display: flex;
+        justify-content: flex-end; 
+        transition: .5s;  
+           }
+    input[type=checkbox]:checked ~ .btn-ch::before{
+        background-color: #e7e7f3;
+            
+    }
+}
+.wrap-search{
+    margin: 10px 0;
+    input[type=search]{
+        padding: 0 15px 0 32px;
+        outline: none;
+        height: 30px;
+        border: none;
+        background-color:#e7e7f1;
+        border-radius: 20px;
+        box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+        font-size: 14px;
+        color: #6b6b6b;
+        background: url('../img/icons8-search.png') no-repeat  13px 10px;
+        background-size: auto 40%;
+    }
+}
+.wrap-input{
+    margin: 10px 0;
+    input{
+        padding: 0 15px 0 15px;
+        outline: none;
+        width: 110px;
+        height: 30px;
+        border: none;
+        background-color:#e7e7f1;
+        border-radius: 20px;
+        box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+        font-size: 14px;
+        text-align: center;
+        color: #6b6b6b;
+        
+            }
+}
+.wrap-button{
+    margin: 10px 0;
+            input{
+                padding: 0 15px 0 15px;
+                outline: none;
+                width: 110px;
+                height: 30px;
+                border: none;
+                background-color:#e7e7f1;
+                border-radius: 20px;
+                box-shadow: -2px -2px 6px #fff, 2px 2px 6px #bfbfc8;
+                font-size: 14px;
+                text-align: center;
+                color: #6b6b6b;
+            }
+
+            input:active{
+                box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+                }
+       
+}
+.wrap-adduser{
+    margin: 10px 0;
+            input{
+                padding: 0 15px 0 15px;
+                outline: none;
+                width: 110px;
+                height: 30px;
+                border: none;
+                background-color:#e7e7f1;
+                border-radius: 20px;
+                box-shadow: -2px -2px 6px #fff, 2px 2px 6px #bfbfc8;
+                font-size: 14px;
+                text-align: right;
+                color: #6b6b6b;
+                
+            }
+            .btn-adduser{
+                background: url('../img/icons8-add.png') no-repeat  13px 10px;
+                background-size: auto 40%;
+            }
+            
+            input:active{
+                box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+                }
+       
+}
+.wrap-buttons{
+    margin: 10px 0;
+            input{
+                padding: 0 15px 0 15px;
+                outline: none;
+                width: 85px;
+                height: 30px;
+                border: none;
+                background-color:#e7e7f1;
+                border-radius: 20px;
+                box-shadow: -2px -2px 6px #fff, 2px 2px 6px #bfbfc8;
+                font-size: 14px;
+                text-align: left;
+                color: #6b6b6b;
+                margin: 10px 0;
+                
+            }
+            .btn-share{
+                background: url('../img/icons8-share.png') no-repeat  59px 10px;
+                background-size: auto 40%;
+            }
+            .btn-label{
+                background: url('../img/icons8-mark.png') no-repeat  58px 8px;
+                background-size: auto 49%;
+            }
+            input:active{
+                box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+                }
+       
+}
+.wrap-dropdown{
+    input{
+        padding: 0 15px 0 15px;
+        outline: none;
+        width: 110px;
+        height: 30px;
+        border: none;
+        background-color:#e7e7f1;
+        border-radius: 20px;
+        box-shadow: -2px -2px 6px #fff, 2px 2px 6px #bfbfc8;
+        font-size: 14px;
+        text-align: left;
+        color: #6b6b6b;
+        
+    }
+    .btn-dropdown{
+        background: url('../img/icons8-bot.png') no-repeat  82px 7px;
+        background-size: auto 60%;
+    }
+    input:active{
+        box-shadow: inset -2px -2px 2px white,  inset 2px 2px 2px #b4b4bf;
+        }
+}
